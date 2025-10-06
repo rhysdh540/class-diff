@@ -811,6 +811,7 @@ public class DiffWriter extends DiffVisitor {
 
         int attributeCount = customAttributes.size();
         if (symbolTable.computeBootstrapMethodsSize() > 0) {
+			symbolTable.addConstantUtf8("BootstrapMethods");
             attributeCount++;
         }
         if (source != 0 || debug != 0) {

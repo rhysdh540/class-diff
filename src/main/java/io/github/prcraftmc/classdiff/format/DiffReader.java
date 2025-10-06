@@ -1016,7 +1016,9 @@ public class DiffReader {
             case Symbol.CONSTANT_DYNAMIC_TAG:
                 return readConstantDynamic(constantPoolEntryIndex);
             default:
-                throw new IllegalArgumentException();
+                throw new IllegalArgumentException(
+						"Unsupported constant pool tag: " + (contents[cpInfoOffset - 1] & 0xff)
+				);
         }
     }
 

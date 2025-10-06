@@ -328,7 +328,7 @@ public class SymbolTable {
                     }
                 }
                 if (isSameBootstrapMethod) {
-                    ReflectUtils.setByteVectorLength(bootstrapMethods, length);
+                    ReflectUtils.setByteVectorLength(bootstrapMethods, offset);
                     return entry;
                 }
             }
